@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--TODO: Make the website look better-->
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="static/style.css">
+        <title>
+            Query System 2021 -- Q & A
+        </title>
+    </head>
+    <body>
+        <h2>
+            Questions and Answers
+        </h2>
+        <p>
+          <div class="login">
+            <br/>
+            <ul id="navigation">
+            <label><p>Question: {{ question }}</p></label>
+            <label><p>Name: {{ data }}</p></label>
+            
+            <!--Note: this permanently deletes the question.-->
+            <!--TODO: Make a login interface so that only the teacher could use this page-->
+            <br><p><a href="next_question">Mark as resolved</a></p>
+            <br><p><a href="all_questions">View all questions</a></p>
+            <br><p><a href="/">Go back</a></p>
+            </div>
+        </p>
+    </body>
+</html>
