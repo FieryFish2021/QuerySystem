@@ -13,12 +13,17 @@ body
         padding: 80px;  
         background:#50363a;  
         border-radius: 15px ;  
-          
-}  
+}
+
 h2{  
     text-align: center;  
     color:#540916;  
     padding: 20px;  
+}
+
+b{  
+    text-align: center;  
+    color:#600000;
 }  
 label{  
     color:#aa9d87;  
@@ -55,5 +60,5 @@ span{
 }  
 a{  
     float: right;  
-    background-color: grey;  
+    background-color: none;  
 }  
