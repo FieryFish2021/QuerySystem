@@ -28,7 +28,7 @@ print(db["DATABASE_LOGIN_CREDENTIALS"])
 def signup():
   return render_template('signup.html')
 
-
+# Hello
 
 @web_site.route('/create_new_account',methods=['POST','GET'])
 def create_new_account():
