@@ -9,18 +9,9 @@ web_site = Flask(__name__)
 def index():
 	return render_template('index.html')
 
-# TODO: Finish the login & sign up system!
-# Reference:
+# TODO: The login & sign up system
 # https://pythonspot.com/login-authentication-with-flask/
 
-# Store the password and email in our database.
-# Don't worry about security.
-# a dictionary might do the trick.
-
-# The repl database is already used to store the questions,
-# so it might be trickier to store pw/emails in the repl database.
-
-# Calling this function clears all keys in the repl database
 def clear_database():
   for key in db.keys():
     del db[key]
@@ -44,7 +35,7 @@ def create_new_account():
   password = request.form['password']
   email = request.form['email']
   db["DATABASE_LOGIN_CREDENTIALS"][email]=password
-  return '%s Account Created! <br/> <a href="/">Back Home</a>' % (db.keys())
+  return '%s Account Created! <br/> <a href="/">Back Home</a>' % (db["DATABASE_LOGIN_CREDENTIALS"])
 #return render_template('signup.html')
 
 
