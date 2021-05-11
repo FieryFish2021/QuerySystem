@@ -57,11 +57,6 @@ def question():
 	# 2. The current date/time (requires the datetime module)
 	# 3. Resolved or not (a Boolean value, True/False)
 	
-	# The quesiton should be the KEY,
-	# all the other information should be stored in a LIST,
-	# and the list will be the VALUE.
-	# db[question] = [[name1,name2],date_time,resolved]
-	
 	db['DATABASE_QUESTIONS'].append([name,question])
 	for key in db.keys():
 	   print(db[key])
