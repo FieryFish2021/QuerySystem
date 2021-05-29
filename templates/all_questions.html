@@ -1,36 +1,56 @@
-<!DOCTYPE html>
+  
 <!--This page displays all the questions.-->
 <!--TODO: Create a table of output.-->
-<html>
+
+{% extends 'layout.html' %}
+{% block body %}
+  <div class="jumbotron text-center">
+    <h1>Questions Log</h1>
+    <p class="lead">Unresolved questions will be displayed here.</p>
+  
+  </div>
+    <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="static/style.css">
-        <title>
-            Query System 2021 -- All Questions
-        </title>
+    <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
     </head>
     <body>
-        <h2>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            All Logged Questions
-=======
-            Questions and Answers -- All Questions
->>>>>>> origin/master
-=======
-            Questions and Answers -- All Questions
->>>>>>> origin/master
-        </h2>
-        <p>
-          <div class="login">
-            <br/>
-            <ul id="navigation">
-            {% for key in keys %}
-            <label><p>{{ key[0] }}: {{ key[1] }}</p></label>
-            {%endfor%}
-            </ul>
-            
-            <a href="/">Go back</a>
-            </div>
-        </p>
+    <table>
+      <tr>
+        <th>Student Name</th>
+        <th>Type of help needed</th>
+        <th>Time</th>
+        <th>Status</th>
+        <th>Who they want for help</th>
+      </tr>
+      {% for key in keys %}
+      <tr>
+        <td>{{ key[0] }}</td>
+        <td>{{ key[1] }}</td>
+        <td>{{ key[2] }}</td>
+        <td>{{ key[3] }}</td>
+        <td>{{ key[4] }}</td>
+      </tr>
+      <tr>
+    {%endfor%}
+    
+    </table>
+    
     </body>
-</html>
+    </html>
+{% endblock%}

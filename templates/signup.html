@@ -1,33 +1,31 @@
-<!DOCTYPE html>
-<!--TODO: The Sign Up System-->
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="static/style.css">
-        <title>
-            Query System 2021 -- Login
-        </title>
-    </head>
-    <body>
-        <h2>Sign Up</h2>
-        <center>Don’t reuse any important password!</center>
-        <center><br/>We don’t spend a lot on security for this website.</center>
-        <p>
-          <div class="login">
-            <form id="login" action="/create_new_account" method="post">
-                <label><b>Email:</b></label>    
-                <input type="text" name="email" id="email">  <br />
-                <label><b>Password:</b></label>
-                <input type="text" name="password" id="password"/>
-                <input type="submit" name= "signup" id="signup" value="Sign up!" />
-            </form>
-            <br/>
-            <a href="answer">Answer the questions</a>
-            
-            <br/>
-            
-            <a href="login">Login</a>
-            
-            </div>
-        </p>
-    </body>
-</html>
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="jumbotron text-center">
+    <h1>Sign up</h1>
+    <p class="lead">Create a new account! Make sure to use your enter your email and a password.</p>
+    
+    <center>Important note: Don’t reuse any important password!</center>
+    <center><br/>We don’t spend a lot on security for this website.</center>
+  <title>
+        Query System 2021 -- Login
+    </title>
+    
+    <p>
+      <div class="signup">
+        <form id="signup" action="/create_new_account" method="post">
+            <label><b>Email:</b></label>    
+            <input type="text" name="email" id="email">  <br />
+            <label><b>Password:</b></label>
+            <input type="text" name="password" id="password"/>
+            <input type="submit" name= "signup" id="signup" value="Sign up!" />
+        <!--Display the message variable passed from the Python backend-->
+        <center><label><p>{{message}}</p></label></center>
+        <br><a href="login">Back to the login page</a>
+         </form>
+      </div>
+  </div>
+        
+   
+    
+{% endblock%}

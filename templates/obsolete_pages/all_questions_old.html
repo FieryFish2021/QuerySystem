@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<!--This page is displayed when there are no more questions to show-->
+<!--This page displays all the questions.-->
+<!--TODO: Create a table of output.-->
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="static/style.css">
         <title>
-            Query System 2021 -- No more Questions
+            Query System 2021 -- All Questions
         </title>
     </head>
     <body>
         <h2>
-            Opps
+            All Logged Questions
         </h2>
         <p>
           <div class="login">
             <br/>
             <ul id="navigation">
-            <label><p>No more questions!</p></label>
+            {% for key in keys %}
+            <label><p>{{ key[0] }}: {{ key[1] }}</p></label>
+            {%endfor%}
+            </ul>
             
             <a href="/">Go back</a>
-          </div>
+            </div>
         </p>
     </body>
 </html>

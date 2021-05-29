@@ -1,0 +1,34 @@
+
+<!--The old template, no longer in use-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="static/style.css">
+        <title>
+            Query System 2021
+        </title>
+    </head>
+    <body>
+        <h2>
+            Query -- Pushing changes from replit to GitHub!
+        </h2>
+        <center><label><p>{{message}}</p></label></center>
+        
+        <p>
+          <div class="login">
+            <form id="login" action="/submit_question" method="post">
+                <label><b>Your name:</b></label>    
+                <input type="text" name="name" id="name">  <br />
+                <label><b>Your Question:</b></label>
+                <input type="text" name="question" id="question"/>
+                <input type="submit" name= "form" id="log" value="Submit" />
+            </form>
+            <br/>
+            <a href="view_questions">Answer the questions</a>
+            <br/>
+            <a href="login">Login</a>
+            </div>
+        </p>
+    </body>
+</html>
