@@ -3,10 +3,9 @@
 {% block body %}
   <div class="jumbotron text-center">
     <h1>Sign up</h1>
-    <p class="lead">Create a new account! Make sure to use your enter your email and a password.</p>
+    <p class="lead">Create a new account! Make sure to enter your email and password.</p>
     
-    <center>Important note: Don’t reuse any important password!</center>
-    <center><br/>We don’t spend a lot on security for this website.</center>
+    <center>Important note: Don’t reuse any important password! We don’t spend a lot on security for this website.</center>
   <title>
         Query System 2021 -- Login
     </title>
@@ -20,8 +19,8 @@
             <input type="text" name="password" id="password"/>
             <input type="submit" name= "signup" id="signup" value="Sign up!" />
         <!--Display the message variable passed from the Python backend-->
-        <center><label><p>{{message}}</p></label></center>
-        <br><a href="login">Back to the login page</a>
+          <br><center><label><p>{{message}}</p></label></center>
+          <br><a href="login">Back to the login page</a>
          </form>
       </div>
   </div>

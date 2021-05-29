@@ -2,12 +2,17 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">WebsiteQ</a>
-      <br>Logged in: {{email}}
+      {% if session['loggedin'] == null %}
+      <br>You are not logged in.
+      {% else %}
+      <br>Welcome, {{session['email']}}!
+      {% endif %}
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="/">Ask Anything!</a></li>
-      <li><a href="/all_questions">Question List</a></li>
-      <li><a href="/login">Login</a></li>
+      <li><a href="/all_questions">Question Log</a></li>
+      
+      <li><a href="/login">Login / Sign out</a></li>
 
     </ul>
   </div>

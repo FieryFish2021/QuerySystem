@@ -6,8 +6,9 @@
 {% block body %}
   <div class="jumbotron text-center">
     <h1>Questions Log</h1>
-    <p class="lead">Unresolved questions will be displayed here.</p>
-  
+    <p class="lead">{{message}}</p>
+    <br><a href="/view_questions">Display a single question</a>
+    <br><a href={{link}}>{{linktext}}</a>
   </div>
     <html>
     <head>
@@ -44,7 +45,11 @@
         <td>{{ key[1] }}</td>
         <td>{{ key[2] }}</td>
         <td>{{ key[3] }}</td>
-        <td>{{ key[4] }}</td>
+        <td>
+          <form action="resolve_question" method="post">
+              <button name="question" value=${{key[1]}}>Resolve</button>
+          </form>
+        </td>
       </tr>
       <tr>
     {%endfor%}

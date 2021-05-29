@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="jumbotron text-center">
+    <h1>Sign out</h1>
+    <p class="lead">You are currently logged in as {{session['email']}}. Do you wish to sign out?</p>
+    <title>
+        Query System 2021 -- Sign out
+    </title>
+    <p><a href="logout">Yes, log me out!</a></p>
+                
+{% endblock%}

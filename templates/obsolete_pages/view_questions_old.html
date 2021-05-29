@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--This page displays a single question.-->
+<!--TODO: Figure out a way to ARCHIVE the resolved questions instead of DELETING them-->
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="static/style.css">
+        <title>
+            Query System 2021 -- Q & A
+        </title>
+    </head>
+    <body>
+        <h2>
+            Questions and Answers
+        </h2>
+        <p>
+          <div class="login">
+            <br/>
+            <ul id="navigation">
+            <label><p>Question: {{ question }}</p></label>
+            <label><p>Name: {{ data }}</p></label>
+            
+            <!--Note: this permanently deletes the question.-->
+            <br><p><a href="resolve_question">Mark as resolved</a></p>
+            <br><p><a href="all_questions">View all questions</a></p>
+            <br><p><a href="/">Go back</a></p>
+            </div>
+        </p>
+    </body>
+</html>
